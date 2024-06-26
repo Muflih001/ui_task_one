@@ -59,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             borderSide: const BorderSide(color: Colors.white),
                             borderRadius: BorderRadius.circular(6),
                           ),
-                          labelText: 'Enter your username',
+                          labelText: 'Enter your email',
                         ),
                         validator: (value) {
                           if (value == null || value.isEmpty) {
