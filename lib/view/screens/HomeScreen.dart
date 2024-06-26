@@ -14,6 +14,20 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+            decoration: BoxDecoration(
+                color: Colors.black, borderRadius: BorderRadius.circular(10)),
+            child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'LoginScreen');
+                },
+                child: Text(
+                  'Log Out',
+                  style: TextStyle(color: Colors.white),
+                ))),
+      ),
     );
   }
 }

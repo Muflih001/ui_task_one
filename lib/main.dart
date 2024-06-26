@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_task_one/view/screens/HomeScreen.dart';
-
 import 'package:ui_task_one/view/screens/LoginScreen.dart';
-
 import 'package:ui_task_one/view/screens/RegisterScreen.dart';
 
 void main() {
