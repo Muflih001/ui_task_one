@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_task_one/view/assets.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -6,8 +7,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final _usernameController = TextEditingController();
-  final _passwordController = TextEditingController();
+  final _logusernameController = TextEditingController();
+  final _logpasswordController = TextEditingController();
   bool _obscureText = true;
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       width: double.infinity,
                       child: TextFormField(
                         keyboardType: TextInputType.emailAddress,
-                        controller: _usernameController,
+                        controller: _logusernameController,
                         cursorColor: Colors.black,
                         style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
@@ -78,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: TextFormField(
                         obscureText: _obscureText,
                         // obscuringCharacter: '.',
-                        controller: _passwordController,
+                        controller: _logpasswordController,
                         cursorColor: Colors.black,
                         style: const TextStyle(color: Colors.black),
                         decoration: InputDecoration(
@@ -155,11 +156,11 @@ class _LoginScreenState extends State<LoginScreen> {
                           borderRadius: BorderRadius.circular(6)),
                       child: TextButton(
                           onPressed: () {
-                            String username = _usernameController.text;
-                            String password = _passwordController.text;
+                            String username = _logusernameController.text;
+                            String password = _logpasswordController.text;
                             if (_formKey.currentState!.validate()) {
-                              if (username == 'muflih1@gmail.com' &&
-                                  password == 'muflih@123') {
+                              if (username == username1 &&
+                                  password == password1) {
                                 // Credentials are correct, navigate to the next screen
                                 Navigator.pushNamed(context, 'HomeScreen');
                               } else {

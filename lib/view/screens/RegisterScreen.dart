@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_task_one/view/assets.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -11,12 +12,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
   final _conformpasswordController = TextEditingController();
+
   bool _obscureText = true;
   bool _obscureTextTwo = true;
 
   @override
   Widget build(BuildContext context) {
+    username1 = _usernameController.text;
+    password1 = _passwordController.text;
     final _formKey = GlobalKey<FormState>();
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -168,14 +173,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           borderRadius: BorderRadius.circular(6)),
                       child: TextButton(
                           onPressed: () {
-                            String username = _usernameController.text;
-                            String password = _passwordController.text;
-                            String conformPassword =
-                                _conformpasswordController.text;
                             if (_formKey.currentState!.validate()) {
-                              if (username == 'muflih1@gmail.com' &&
-                                  password == 'muflih@123' &&
-                                  password == conformPassword) {
+                              if (_passwordController.text ==
+                                  _conformpasswordController.text) {
                                 // Credentials are correct, navigate to the next screen
                                 Navigator.pushNamed(context, 'LoginScreen');
                               } else {
